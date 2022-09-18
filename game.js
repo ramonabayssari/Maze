@@ -1,5 +1,5 @@
 let isStart = false;  
-
+let score =0;
  window.onload = function () {
         const start = document.getElementById("start");
         const end = document.getElementById("end");
@@ -7,7 +7,7 @@ let isStart = false;
         const game =  document.getElementById("game");
         const stat = document.getElementById("status");
         const scr= document.getElementById("score");
-        let score =0;
+        
     
 
         
@@ -40,9 +40,11 @@ let isStart = false;
         //to know when the mouse gets out (mouseleave so when the mouse leave the child elements it wont be 
         //triggered) of the game div to cheat 
         game.addEventListener("mouseleave", function () {
+            if(isStart==true){
             score=score-10;
             stat.textContent="Nah bruh you can not cheat, LOSER!";
             for (let i = 0; i < boundary.length; i++) { boundary[i].style.backgroundColor = "#FF0000"; }  
+        }
             isStart=false;    
             scr.textContent="Your score is now: "+score;               
         });
@@ -63,6 +65,7 @@ let isStart = false;
     
     
 }
+export{score};
     
     
 
