@@ -19,7 +19,7 @@ p {
 	width: 500px;
 }
 
-#start, #end {
+#start, #end { /*buttons of start and end*/
 	position: absolute;
 	top: 205px;
 	height: 30px;
@@ -36,6 +36,7 @@ p {
 #game #start {
 	background-color: #88ff88;
 	left: 0;
+	
 }
 
 #game #end {
@@ -48,7 +49,9 @@ div.boundary {
 	border: 1px solid black;
 }
 
-div.boundary.example {
+div.example {
+	background-color: #eeeeee;
+	border: 1px solid black;
 	margin: auto;
 	width: 100px;
 	height: 25px;
