@@ -113,3 +113,7 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	height: 150px;
 	width: 98px;
 }
+
+.blue{
+	background-color: rgb(87, 87, 201);
+}
