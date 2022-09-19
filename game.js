@@ -1,5 +1,8 @@
 let isStart = false;  
-
+let score =0;
+const username=localStorage.getItem("curr_user");
+	const user=JSON.parse(localStorage.getItem(username));
+	score=user["score"];
  window.onload = function () {
         const start = document.getElementById("start");
         const end = document.getElementById("end");
@@ -7,7 +10,7 @@ let isStart = false;
         const game =  document.getElementById("game");
         const stat = document.getElementById("status");
         const scr= document.getElementById("score");
-        let score =0;
+        
     
 
         start.addEventListener("click", function(){
@@ -69,7 +72,52 @@ let isStart = false;
     
 }
 
+function store(){
+
+    const name = document.getElementById('username');
+    const psw = document.getElementById('psw');
+    const lowerCaseLetters = /[a-z]/g;
+    const upperCaseLetters = /[A-Z]/g;
+    const numbers = /[0-9]/g;
+
+    if(name.value.length == 0){
+        alert('Please fill in email');
+
+    }else if(pw.value.length == 0){
+        alert('Please fill in password');
+
+    }else{
+        const user = { name: username, pw: psw, score: 0 }
+        localStorage.setItem(username, JSON.stringify(user));
+        location.assign("index.html");
+        alert('Your account has been created');
+    }
+}
+
+//checking
+function check(){
     
-    
+    const userName = document.getElementById('username');
+    const userPw = document.getElementById('psw');
+   
+    const username = userName.value;
+    if (username == "") {
+        flag = true;
+    }
+    const password = userPw.value;
+    if (password == "") {
+        flag = true;
+    }
+    if (flag == false) {
+        const user = JSON.parse(localStorage.getItem(username));
 
 
+        if (user["pw"] == password) {
+            localStorage.setItem("curr_user", username);
+            location.assign("game.html");
+        }
+
+
+}
+
+}
