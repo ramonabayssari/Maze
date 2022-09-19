@@ -8,19 +8,19 @@
 <center>
 <body>
   <div id="formDiv">
-        <form id="signupForm" class="blue">
+        <div id="signupForm" class="blue">
             <h1>Sign in</h1>
             <label for="username" >Unername</label>
-            <input type="text" id="username" placeholder="Username" required autofocus><br>
+            <input type="text" id="username"  name="username" placeholder="Username" required autofocus><br>
 
             <label for="password" >Password</label>
-            <input type="password" id="password" placeholder="password" required><br>
+            <input type="password" id="psw" name="psw" placeholder="password" required><br>
 
 
             <br/>
-            <input type="submit" value="Submit" class="center sub-but">
+            <input type="submit" value="Submit" onclick="check()" class="center sub-but" >
             <br/>
-        </form>
+        </div>
 
   </div>
   <a href="index.html"> Sign up</a>
