@@ -3,6 +3,7 @@
 <head>
   
   <title>sign up</title>
+  
   <script type="text/javascript" src="local.js"></script>
 </head>
 <center>
@@ -11,14 +12,14 @@
         <form id="signupForm" class="blue">
             <h1>Sign Up</h1>
             <label for="username" >Unername</label>
-            <input type="text" id="username" placeholder="Username" required autofocus><br>
+            <input type="text" id="username"  name="username" placeholder="Username" required autofocus><br>
 
             <label for="password" >Password</label>
-            <input type="password" id="password" placeholder="password" required><br>
+            <input type="password" id="psw" name="psw" placeholder="password" required><br>
 
 
             <br/>
-            <input type="submit" value="Submit" class="center sub-but">
+            <input type="submit" value="Submit" onclick="store()" >
             <br/>
         </form>
 
