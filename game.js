@@ -1,5 +1,5 @@
 let isStart = false;  
-let score =0;
+
  window.onload = function () {
         const start = document.getElementById("start");
         const end = document.getElementById("end");
@@ -7,10 +7,13 @@ let score =0;
         const game =  document.getElementById("game");
         const stat = document.getElementById("status");
         const scr= document.getElementById("score");
-        
+        let score =0;
     
 
-        
+        start.addEventListener("click", function(){
+                score=0;
+                scr.textContent="Your score is now: "+score;
+        })
 
         //press S to start 
         start.addEventListener("mouseover", function () {
@@ -65,7 +68,7 @@ let score =0;
     
     
 }
-export{score};
+
     
     
 
